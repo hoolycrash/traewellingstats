@@ -1,28 +1,79 @@
 <html>
 <head>
-<title>Meine Tr&auml;welling-Statistik</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
+	<title>Meine Tr&auml;welling-Statistik</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/styledark.css">
+	<link rel="icon" type="image/x-icon" href="./assets/favicon.png">	
 </head>
 
 <body>
-
-	<h1>Meine Tr&auml;welling-Statistik</h1>
-
-	<form action="https://traewelling.de/stats">
-		<label for="starttag">von</label>
-	    <input type="date" id="starttag" name="from"><br><br>
+	
+	<center>
+		<div class="container">
 		
-		<label for="endtag">bis</label>
-		<input type="date" id="endtag" name="to"><br><br>
-		<input type="submit" value="Los!">
-	</form>
-	
-	<br><br>
-	
-	<small>Gemacht mit &#9829; von <a href="https://twitter.com/SBahnFahrer">@SBahnFahrer</a></small>
+			<h2>Your Tr&auml;welling-Stats</h2>
+			<form action="https://traewelling.de/stats">
+				<label for="starttag">von</label>
+			   <input type="date" id="starttag" name="from"><br><br>
+				<label for="endtag">bis</label>	
+				<input type="date" id="endtag" name="to"><br><br>
+				<button type="submit" class="sendbutton">ABSENDEN</button>
+			</form>
+			
+			<div class="popup">
+				<b>Hinweis:</b><br>
+				Bei gr&ouml;&szlig;en Zeitspannen kann die Ladezeit bis zu 60 Sekunden betragen.
+			</div>
+			<br>
+						
+			<h2>&#128161; Vorschl&auml;ge</h2>
+			<a href="https://traewelling.de/stats?from=2010-01-01&to="><button>Seit der Aufzeichnung</button></a>
+			<a id="dynamicLinkthisyear" href="#"><button>Dieses Jahr</button></a>
+			<a id="dynamicLinklastyear" href="#"><button>Letztes Jahr</button></a>
+			<a id="dynamicLinklastthirtydays" href="#"><button>Letzte 30 Tage</button></a>
+			<br><br>
+			<small>Gemacht mit <span class="emoji">	&#10084;</span> von <a href="https://twitter.com/SBahnFahrer">@SBahnFahrer</a></small>
+			<a href="https://github.com/hoolycrash/traewellingstats"><img src="./assets/github-mark-white.svg" class="icon"></a>
 
+		</div>
+	</center>
+	
 
+	<script>
+	  var currentDate = new Date();
+	  var currentYear = currentDate.getFullYear();
+	  var linkElement = document.getElementById('dynamicLinkthisyear');
+	  var linkURL = 'https://traewelling.de/stats?from=' + currentYear + '-01-01&to=';
+	  linkElement.href = linkURL;
+	</script>
+	
+	<script>
+	  var currentDate = new Date();
+	  var currentYear = currentDate.getFullYear();
+	  var previousYear = currentYear - 1;
+	  var linkElement = document.getElementById('dynamicLinklastyear');
+	  var linkURL = 'https://traewelling.de/stats?from=' + previousYear + '-01-01&to=' + previousYear + '-12-31';
+	  linkElement.href = linkURL;
+	</script>
+	
+	<script>
+	  var currentDate = new Date();
+	  var previousDate = new Date();
+	  previousDate.setDate(currentDate.getDate() - 30);
+	  
+	  var currentYear = currentDate.getFullYear();
+	  var currentMonth = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+	  var currentDay = ('0' + currentDate.getDate()).slice(-2);
+	  
+	  var previousYear = previousDate.getFullYear();
+	  var previousMonth = ('0' + (previousDate.getMonth() + 1)).slice(-2);
+	  var previousDay = ('0' + previousDate.getDate()).slice(-2);
+	  
+	  var linkElement = document.getElementById('dynamicLinklastthirtydays');
+	  var linkURL = 'https://traewelling.de/stats?from=' + previousYear + '-' + previousMonth + '-' + previousDay + '&to=' + currentYear + '-' + currentMonth + '-' + currentDay;
+	  linkElement.href = linkURL;
+	</script>
 
 
 </body>
