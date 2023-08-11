@@ -1,0 +1,65 @@
+body {
+	margin: 0px;
+	background-color: #cecece;
+	text-align: left;
+	font-family: verdana;
+}
+
+.container {
+	
+	min-height: 100%;
+	max-width: 700px;
+	text-align: left;
+	padding: 20px;
+	background-color: #fff;
+}
+
+input{
+	width: 100%;
+	min-height: 35px;
+	padding: 5px;
+	background-color: #fff;
+	border-width: 0px 0px 2px 0px;
+	border-color: #272727;
+}
+
+input:focus{
+	border-color: #3a3a67;
+	outline: none;
+}
+
+.sendbutton{
+	background-color: #3a3a67;
+	width: 100%;
+	color: #fff;
+}
+
+button {
+	border-width: 0px;
+	font-size: 20px;
+	height: 45px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: #cecece 0px 0px 10px;
+}
+
+button:hover{
+	animation-name: buttonhover;
+	animation-duration: 0.25s;
+	box-shadow: #3a3a67 0px 0px 10px;
+	transition: smooth;
+}
+
+
+.popup {
+	background-color: #dbd7bc;
+	padding: 10px;	
+	border-radius: 5px;
+	
+}
+
+.icon {
+	height: 20px;
+	border: none;
+}
+
