@@ -1,0 +1,41 @@
+@media (prefers-color-scheme: dark) {
+
+body {
+	background-color: #000;
+	color: #cecece;
+}
+
+a {
+	color: #fff;
+}
+
+.container {
+	background-color: #1e1e1e;
+}
+
+input{
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+
+
+button {
+	box-shadow: #1a1a1a 0px 0px 10px;
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+button:hover{
+	box-shadow: #3a3a67 0px 0px 10px;
+
+}
+
+.popup {
+	background-color: #39330f;
+	box-shadow: #1e1e1e 0px 0px 10px;		
+}
+
