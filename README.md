@@ -1,8 +1,8 @@
 # Träwellingstats
 
-<p>Träwellingstats ist ein kleines Tool welches es ermöglicht sich die eigenen Träwelling-Statistiken über einen beliebigen Zeitraum anzusehen.</p>
+Träwellingstats is a little tool that allows you to view your own Träwelling statistics over any period of time.
 
-<p>Hierzu wird der gewünschte Start- und Endtag vom Nutzer angegeben und durch das bestätigen mit Klick auf den Button zur Träwelling-Statistik-Seite weitergeleitet.</p>
+To do this, the user enters the desired start and end date and is redirected to the Träwelling statistics page by clicking on the button.
 
 Demo: https://twlngstats.de.cool/
 
