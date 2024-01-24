@@ -6,3 +6,8 @@ To do this, the user enters the desired start and end date and is redirected to 
 
 Demo: https://twlngstats.de.cool/
 
+
+##
+[![linkedin](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/SBahnFahrer)
+
+[☕ Buy me a coffe](https://www.buymeacoffee.com/felixnietzold)
